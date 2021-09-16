@@ -15,6 +15,7 @@
         <a-menu-item key="2">
           <router-link to="/about"> Foot Wear </router-link>
         </a-menu-item>
+        <!-- <router-view /> -->
         <a-menu-item key="3"> Perfume </a-menu-item>
       </a-menu>
     </a-layout-header>
@@ -24,7 +25,9 @@
         <a-breadcrumb-item>List</a-breadcrumb-item>
         <a-breadcrumb-item>App</a-breadcrumb-item>
       </a-breadcrumb>
-      Categories:
+      <router-view>
+        <router-link to="/about"> Categories: </router-link>
+      </router-view>
       <div :style="{ background: '#fff', padding: '24px', minHeight: '280px' }">
         <div>
           <div
@@ -49,7 +52,6 @@ export default {
   components: {
     CardView,
   },
-  data() {},
 };
 </script>
 <style>
@@ -59,8 +61,5 @@ export default {
   background: rgba(255, 255, 255, 0.2);
   margin: 16px 24px 16px 0;
   float: left;
-}
-.forData {
-  /* display: inline-flex; */
 }
 </style>
