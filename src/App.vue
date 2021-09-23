@@ -7,18 +7,18 @@
     <router-view/>
   </div> -->
     <CarouselView />
-    <HelloWorld />
+    <Home />
   </div>
 </template>
 
 <script>
-import HelloWorld from "./components/HelloWorld.vue";
+import Home from "./components/Home.vue";
 import CarouselView from "./components/CarouselView.vue";
 
 export default {
   name: "App",
   components: {
-    HelloWorld,
+    Home,
     CarouselView,
   },
 };

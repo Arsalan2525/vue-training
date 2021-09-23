@@ -3,15 +3,25 @@
     <img
       slot="cover"
       alt="example"
-      src="https://images.pexels.com/photos/298863/pexels-photo-298863.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"
+      :src="source"
+      style="width: 238px; height: 190px"
     />
-    <a-card-meta title="Europe Street beat">
-      <template slot="description"> www.clothes.com </template>
+    <a-card-meta :title="title" border-variant="primary">
+      <template slot="description"> {{ description + "\n" + price }}</template>
+      <!-- <br /> -->
+      <!-- <template slot="price"> {{ price }} </template> -->
     </a-card-meta>
   </a-card>
 </template>
 <script>
 export default {
   name: "CardView",
+  props: {
+    source: String,
+    description: String,
+    title: String,
+    border: String,
+    price: String,
+  },
 };
 </script>
